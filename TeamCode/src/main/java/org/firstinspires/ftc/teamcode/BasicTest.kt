@@ -23,6 +23,10 @@ class BasicTest : LinearOpMode() {
             val intakeMode: IntakeMode = if (gamepad2.b) IntakeMode.OUT else if (gamepad2.y) IntakeMode.IN else IntakeMode.OFF
             robot.intake.set(intakeMode)
 
+            robot.turret.update()
+
+            robot.spindexer.update()
+
             if (gamepad2.left_bumper && !gamepadState2.left_bumper) {
                 robot.spindexer.startSpdxMove(-1)
             }
