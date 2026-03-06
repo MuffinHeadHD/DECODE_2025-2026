@@ -23,7 +23,7 @@ import org.firstinspires.ftc.teamcode.parts.Turret
 import org.firstinspires.ftc.teamcode.parts.Updatable
 import org.firstinspires.ftc.teamcode.util.GamepadState
 
-class Robot(val opMode: OpMode) {
+open class Robot(val opMode: OpMode) {
     var lf: DcMotor
     var lb: DcMotor
     var rf: DcMotor
@@ -94,7 +94,7 @@ class Robot(val opMode: OpMode) {
 
         spindexerServo = AxonServo(hardwareMap.get(CRServo::class.java, "spdx"), hardwareMap.get(AnalogInput::class.java, "axen"))
         spindexerColor = hardwareMap.get(ColorSensor::class.java, "css")
-        spindexerDistance = hardwareMap.get(DistanceSensor::class.java, "cs")
+        spindexerDistance = hardwareMap.get(DistanceSensor::class.java, "css")
         spindexerMagnet = hardwareMap.get(TouchSensor::class.java, "mag")
 
         turretMotor = hardwareMap.get(DcMotor::class.java, "tt")
