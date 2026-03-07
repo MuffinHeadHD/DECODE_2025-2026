@@ -32,7 +32,7 @@ class SpindexerPID {
 }
 
 class Spindexer(val servo: AxonServo, val distanceSensor: DistanceSensor, val colorSensor: ColorSensor, val light: Light, val touchSensor: TouchSensor): Updatable {
-    private val prismColorsUs = intArrayOf(1050, 1200, 965, 1500, 1650, 2400, 1940)
+    private val prismColorsUs = intArrayOf(1050, 1200, 1350, 1500, 1650, 1800, 1940)
 
     private var ballPresent: Boolean = false
     private val inDistance: Double = 3.4
