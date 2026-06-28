@@ -33,7 +33,7 @@ class AxonServo(val servo: CRServo, val analog: AnalogInput, val pid: PIDControl
     override fun update() {
         // Only start moving once the initial target is set
         if (!targetSet) return
-        
+
         var error = targetPosition - position
 
         if (error > 0.5) error -= 1.0
